@@ -1,0 +1,50 @@
+<html>
+<body bgcolor="lightblue"><br><br><br>
+<script language="javascript">
+function validate()
+{
+var flag=1;
+if(document.myform.id.value==""||
+document.myform.pwd.value==""||document.myform.email.value==""||document.myform.country.value==""||
+document.myform.pincode.value==""||
+document.myform.gender.value=="")
+{
+alert("LoginId and Password and email and country and pincode and gender must be filled")
+flag=0;
+}
+if(flag==1)
+{
+alert("VALID INPUT");
+window.open("catalog.html","right");
+}
+else
+{
+alert("INVALID INPUT");
+//document.myform.focus();
+}
+}
+</script>
+<form name="myform">
+<div align="center"><pre>
+LOGIN ID:<input type="text" name="id"><br> PASSWORD:<input type="password" name="pwd"><br>
+EMAIL:<input type="text" name="email"><br>
+USERADDRESS:<input type="address" name="uadd"><br>
+COUNTRY:<select name="Country">
+<option value="-1" selected>select..</option>
+<option value="India">INDIA</option>
+<option value="Korea">KOREA</option>
+<option value="Japan">JAPAN</option>
+<option value="Sudan">SUDAN</option>
+<option value="Russia">RUSSIA</option>
+<option value="canada">CANADA</option>
+</select><br><br>
+PINCODE:<input type="text" name="upin"><br>
+GENDER:<input type="radio" name="sex" value="male" size="10">Male
+<input type="radio" name="sex" value="Female" size="10">Female<br><br> </pre>
+
+<input type="button" value="register" onClick="validate()">&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="reset" value="clear" >
+</div>
+</form>
+</body>
+</html>
